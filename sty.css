@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #8321c4; */
+    background-image: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+    align-items: center;
+    justify-items: center;
+  }
+  .cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    cursor: pointer;
+    background-color: #2e2e2e;
+    border: 2px solid #555;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .cell.X {
+    color: #00FF9C;
+  }
+  .cell.O {
+    color: #D81B60;
+  }
+  .cell:hover {
+    background-color: #444;
+    transform: scale(1.05);
+  }
+  #status {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .options label {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .options label:hover {
+    color: #FFD700;
+  }
+  #difficulty {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #444;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  #difficulty:hover {
+    background-color: #555;
+    color: #FFD700;
+    border-color: #FFD700;
+  }
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #007BFF, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  button:hover {
+    background: linear-gradient(145deg, #0056b3, #003d79);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+  button:active {
+    background: linear-gradient(145deg, #003d79, #002f5f);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transform: scale(0.98);
+  }
+  #title1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fcfafa;
+    font-size: 50px;
+  }
+  .glow {
+    border-color: #FFD700;
+    box-shadow: 0 0 10px #FFD700;
+  }
+  #scoreboard {
+    display: none;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(145deg, #333, #555);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease-in-out;
+  }
+  #scoreboard p {
+    margin: 5px 0;
+  }
+  #scoreboard span {
+    font-weight: bold;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
